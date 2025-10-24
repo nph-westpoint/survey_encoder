@@ -348,7 +348,7 @@ class SurveyEncoder(object):
         non_response = (df.isnull()).sum(axis=1)
         non_response.name = "null"
         non_response = pd.DataFrame(non_response)
-        non_response["%"]=non_response['null']/len(df)
+        non_response["%"]=non_response['null']/df.shape[1]
         return non_response[non_response['null']>=tot]
 
     
@@ -811,4 +811,5 @@ class SurveyEncoder(object):
                 save_map[key] = self.dict[val[0]]
         save_map['type']=self.type
         return save_map
+
         
