@@ -91,7 +91,7 @@ if se is not None:
             if (len(clusters)>0) and (question is not None):
                 distn = se.col_distribution_by_cluster(col=question,grps=clusters)
                 cols = list(distn.columns)
-                cols[-1] = 'distn: '+str(list(clusters))
+                cols[-1] = 'distn: '+str([int(c) for c in clusters])
                 distn.columns = cols
                 distn = distn.T
                 if se.type[question] == 'numerical':
@@ -134,7 +134,7 @@ if se is not None:
                 st.write("Overall Distribution and Mapping for : "+str(question))
                 distn = se.col_distribution_by_cluster(col=question,grps=clusters)
                 cols = list(distn.columns)
-                cols[-1] = 'distn: '+str(list(clusters))
+                cols[-1] = 'distn: '+str([int(c) for c in clusters])
                 distn.columns = cols
                 distn = distn.T
                 if se.type[question] == 'numerical':
@@ -150,3 +150,4 @@ if se is not None:
 
 
                 st.write(distn)
+
