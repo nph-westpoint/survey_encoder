@@ -6,7 +6,7 @@ import matplotlib
 import matplotlib.cm as cm
 import numpy as np
 import pickle
-from IPython.display import display, Image, HTML
+#from IPython.display import display, Image, HTML
 import seaborn as sns
 import plotly.express as px
 import plotly.io as pio
@@ -811,4 +811,5 @@ class SurveyEncoder(object):
                 save_map[key] = self.dict[val[0]]
         save_map['type']=self.type
         return save_map
+
         
