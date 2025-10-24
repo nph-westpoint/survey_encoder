@@ -3,7 +3,7 @@ import analyze_survey as ase
 import pandas as pd
 import numpy as np
 import sys
-sys.path.insert(0,'..')
+#sys.path.insert(0,'..')
 from analyze_survey import SurveyEncoder
 
 def text_input_callback():
@@ -112,4 +112,5 @@ with tab4:
         if save_mapping_btn:
             ase.save_mapping(se,filename)
         
+
         
