@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="Survey Encoder")
+st.set_page_config(page_title="Survey Encoder",page_icon="🔢")
 import analyze_survey as ase
 
 pages_master = {0:[":house: Home","app_launch.py"],
@@ -119,3 +119,4 @@ if rerun:
     st.session_state['selected_response']=None
 
     st.session_state['selected_col'] = None
+
