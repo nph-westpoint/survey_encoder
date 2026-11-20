@@ -5,11 +5,9 @@
 # $ conda create --name <env> --file <this file>
 # platform: win-64
 
-numpy
-matplotlib
-pandas
-scipy
-seaborn
-plotly
-scikit-learn
-easygui
+matplotlib==3.8.4
+numpy==2.5.5
+pandas==3.1.1
+plotly==5.22.0
+scikit_learn==1.4.2
+seaborn==0.13.2
